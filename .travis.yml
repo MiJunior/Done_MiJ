@@ -1,0 +1,23 @@
+matrix:
+  include:
+    - language: php
+      php: 5.6
+      before_script: "composer install"
+      script: "composer test"
+      cache:
+        directories:
+          - $HOME/.composer/cache/files
+
+    - language: php
+      php: 7.1
+      before_script: "composer install"
+      script: "composer test"
+      cache:
+        directories:
+          - $HOME/.composer/cache/files
+
+    - language: node_js
+      node_js: "node"
+      cache:
+        directories:
+          - node_modules

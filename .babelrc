@@ -1,0 +1,68 @@
+{
+	"presets": [
+		[ "env", {
+			"modules": false,
+			"targets": {
+				"browsers": "last 1 Chrome version"
+			}
+		} ],
+		"stage-2"
+	],
+	"plugins": [
+		"date-fns",
+		"lodash",
+		"transform-react-display-name",
+		[ "transform-runtime", {
+			"polyfill": false
+		} ],
+		[ "transform-react-jsx", {
+			"pragma": "createElement"
+		} ]
+	],
+	"env": {
+		"test": {
+			"presets": [
+				[ "env", {
+					"targets": {
+						"node": "current"
+					}
+				} ]
+			]
+		},
+		"production": {
+			"presets": [
+				[ "env", {
+					"modules": false,
+					"targets": {
+						"browsers": [
+							"Chrome >= 61",
+							"Safari >= 11",
+							"iOS >= 11",
+							"Edge >= 16"
+						]
+					}
+				} ],
+				"stage-2"
+			]
+		},
+		"legacy": {
+			"plugins": [
+				[ "transform-runtime", {
+					"polyfill": true
+				} ]
+			],
+			"presets": [
+				[ "env", {
+					"modules": false,
+					"targets": {
+						"browsers": [
+							"last 2 versions",
+							"ie 11"
+						]
+					}
+				} ],
+				"stage-2"
+			]
+		}
+	}
+}

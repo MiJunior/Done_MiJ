@@ -1,0 +1,12 @@
+# Dependencies
+node_modules
+vendor
+
+# Generated
+dist/
+dones.zip
+cypress
+languages/*.mo
+
+# Logs
+*.log
