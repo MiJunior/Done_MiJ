@@ -1,0 +1,29 @@
+.page {
+	display: block;
+
+	@include medium() {
+		padding-top: $sidebar-width-medium;
+	}
+
+	@include desktop() {
+		padding-top: 0;
+		padding-left: $sidebar-width-medium;
+	}
+}
+
+.page__content {
+	width: $content-width;
+	max-width: 100%;
+	margin: 0.6rem auto;
+	padding: 0 0.6rem;
+
+	@include medium() {
+		margin: 1.6rem auto;
+		padding: 0 1.6rem;
+	}
+
+	@include desktop() {
+		margin: 2.6rem auto;
+		padding: 0 2.6rem;
+	}
+}

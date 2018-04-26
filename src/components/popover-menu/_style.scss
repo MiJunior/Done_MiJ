@@ -1,0 +1,32 @@
+.popover-menu {
+	width: 12rem;
+}
+
+.popover-menu__list {
+	list-style-type: none;
+	padding-left: 0;
+	margin: 0 -0.8rem;
+}
+
+.popover-menu__button {
+	width: 100%;
+	padding: 0.1rem 0.8rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: left;
+
+	.popover-menu__list-item.is-selected &,
+	.popover-menu__list-item:hover & {
+		color: #fff;
+		cursor: pointer;
+	}
+
+	.popover-menu__list-item.is-selected & {
+		background-color: $color-blue;
+	}
+
+	.popover-menu__list-item:hover:not( .is-selected ) & {
+		background-color: rgba( $color-blue, 0.6 );
+	}
+}

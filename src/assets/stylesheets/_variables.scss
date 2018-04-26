@@ -1,0 +1,27 @@
+// Layout
+$content-width: 720px;
+$medium-width: 600px;
+$desktop-width: 782px;
+$border-radius: 4px;
+$sidebar-width: 4.6rem;
+$sidebar-width-medium: 6rem;
+$admin-bar-height: 46px;
+$admin-bar-height-medium: 32px;
+
+// Colors
+$background-color: #f7f7f8;
+$font-color-body: #3b454d;
+$border-color: #e6e6e6;
+$border-hover-color: darken( $border-color, 15% );
+$loading-pulse-color: #f7f7f7;
+$mono-hover-color: #f9f9f9;
+$color-gray: #f3f3f3;
+$color-green: #83c61a;
+$color-red: #da635d;
+$color-blue: #16c6eb;
+
+// Typography
+$font-size: 16px;
+
+// Animation
+$transition-duration: 0.2s;

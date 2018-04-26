@@ -1,0 +1,11 @@
+.user {
+	line-height: 30px;
+	display: flex;
+}
+
+.user__avatar-image {
+	display: inline-block;
+	margin-right: 0.8rem;
+	width: 30px;
+	height: 30px;
+}

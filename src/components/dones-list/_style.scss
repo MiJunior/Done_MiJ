@@ -1,0 +1,58 @@
+.dones-list {
+	list-style-type: none;
+	margin: 0.2rem 0;
+	padding-left: 0;
+
+	.done-text {
+		position: relative;
+		margin-left: 2.4rem;
+	}
+
+	&.is-editable .done-text {
+		cursor: text;
+	}
+}
+
+.dones-list__item {
+	position: relative;
+
+	&:not( :last-child ) {
+		margin-bottom: 0.6rem;
+	}
+
+	&.is-placeholder {
+		@include loading-pulse-text;
+	}
+
+	.dones-list.is-editable &:hover .done-text::after {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		border-bottom: 1px dashed $border-hover-color;
+	}
+
+	.done-status {
+		float: left;
+	}
+}
+
+.dones-list__trash {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY( -50% );
+	padding: 0.1rem 0.6rem;
+	display: none;
+	cursor: pointer;
+
+	.dones-list.is-editable .dones-list__item:hover & {
+		display: block;
+	}
+
+	.icon {
+		display: block;
+		fill: $color-red;
+	}
+}

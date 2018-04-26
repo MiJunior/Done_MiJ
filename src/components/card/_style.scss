@@ -1,0 +1,75 @@
+.card {
+	margin-bottom: 0.8rem;
+	background-color: #fff;
+	border-radius: $border-radius;
+	border: 1px solid $border-color;
+
+	@include medium() {
+		margin-bottom: 1.6rem;
+	}
+}
+
+.card__header {
+	display: flex;
+	flex-direction: column;
+
+	@include desktop() {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.card__title-subtitle {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@include desktop() {
+		align-items: flex-start;
+	}
+
+	@include desktop() {
+		flex-direction: column;
+	}
+}
+
+.card__controls .button-group {
+	display: flex;
+	margin-top: 0.6rem;
+
+	@include desktop() {
+		display: block;
+		margin-top: 0;
+	}
+
+	.button {
+		flex: 1;
+	}
+}
+
+.card__content,
+.card__header {
+	padding: 0.8rem;
+
+	@include medium() {
+		padding: 1rem;
+	}
+}
+
+.card__header + .card__content {
+	padding-top: 0;
+}
+
+.card__title,
+.card__subtitle {
+	margin: 0;
+}
+
+.card__title {
+	font-size: 1.4rem;
+}
+
+.card__subtitle {
+	@extend %subtitle;
+}

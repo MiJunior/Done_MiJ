@@ -1,0 +1,9 @@
+.done-text {
+	outline: none;
+	overflow-y: visible;
+}
+
+.done-text__overflow {
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+}
